@@ -1,0 +1,488 @@
+*{ /*para resetar a pagina*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*ESTILIZAÇÃO do menu e do cabeçalho*/
+header{ /*estilização do cabeçalho*/
+    display: flex; /*disparar o uso do flexbox*/
+    justify-content: center; /*props para centralizar no meio da pagina a minha div container*/
+    height: 120px;
+}
+.container{ /*div do conteudo*/
+    
+    display: flex; /*disparo para ativar o uso do FLEX nessa DIV*/
+    justify-content: space-between; /*essa propriedade faz com minhas divs fique uma na esquerda e outra na direita*/
+    width: 990px;
+    
+}
+.logo{
+    display: flex;
+    align-items: center; /*essa propriedade ira alinhar todo o conteudo da DIV no centro da div*/
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+nav ul,
+nav li{ /*estilização da nav UL e LI*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul{ /*disparando o uso do flexbox na tag NAV e UL*/
+    display: flex;
+}
+nav a{ /*estilização da tag a=link */
+    text-decoration: none; /*remove a decoração do texto*/
+    padding: 15px;
+    display: block; /*props para poder manipular qualquer item da lista*/
+    text-transform: uppercase; /*deixa qualquer texto em caixa alta, independente de estar assim ou nao no HTML*/
+    color: #727272;
+    font-size: 15px;
+}
+nav .active a,  /*est da tag NAV e da classe*/
+nav a:hover{
+    background-color: #39aae1; 
+    color: white;
+    border-radius: 50px; /*arredondar a borda*/
+}
+/*FIM DA ESTILIZAÇÃO DO CABEÇALHO EM GERAL*/
+
+#banner{ /*area da estilização da imagem*/
+    background-image: url(/medicenter/assets/images/img1.jpg);/*props que usa imagem no fundo do site*/
+    background-position: center; /*essa props ira centralizar a imagem no meio da tela/site*/
+    background-size:cover; /*essa props faz com a nossa imagem se adapte ao tamanho da tela de cada monitor*/
+    height: 670px;
+    display: flex;
+    justify-content: center;
+}
+.column{
+    flex-direction: column; /*foi criado uma segunda classe para tratar a div como COLUNA*/
+}
+.banner-text h1{
+    color: white;
+    font-size: 70px;
+    text-shadow: 0px 2px 0px rgb(112, 108, 108);
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.banner-text p{
+    color:white;
+    font-size: 20px;
+    text-shadow: 0px 2px 0px rgb(112, 108, 108);
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    margin-top: 30px;
+}
+.banner-text{
+    flex: 1;
+    /*background-color: thistle;*/
+    display: flex;
+    flex-direction: column; /*disparar essa props deixa todos os itens como counas*/
+    justify-content: center;
+
+}
+.banner-options{ /*div das opções*/
+    height: 210px; /*largura padrao do site*/
+    /*background-color: turquoise;*/
+    display: flex; /*flexbox disparado para os itens serem flex*/
+} 
+.banner1, 
+.banner2,
+.banner3{
+    flex: 1;
+    color: white;
+    padding: 20px;
+}
+.banner1{
+    background-color: #39aae1;
+}
+.banner2{
+    background-color: #0079c7;
+}
+.banner3{
+    background-color: #2b4c99;
+}
+.banner-title{
+    font-size: 21px;
+}
+.banner-description{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.banner-options a{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+.banner-days-hours{ /*div principal dos horarios*/
+    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: 1px solid #0079c7;
+    
+}
+.descricao1, .descricao2, .descricao3{ /*div do dia da semana*/
+    /*background-color: red;*/
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: 15px; 
+}
+.descricao-hora1, .descricao-hora2, .descricao-hora3{ /*div dos horarios*/
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+#geral{ /*section do conteudo do meio/geral*/
+    display: flex;
+    justify-content: center;   
+}
+#geral section{ /**/
+    flex: 2;
+}
+#geral aside{ /**/
+    flex: 1;
+}
+.widget-title{ /**/
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.widget-title-text{ /**/
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+.widget-title-bar{ /**/
+    width: 50px;
+    height: 3px;
+    background-color: #39aae1;
+    margin-top: 10px;
+}
+.flex{/**/
+    display: flex;
+    flex-wrap: wrap;
+}
+article{/**/
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+article a{/**/
+    text-decoration: none;
+}
+article .new-data{ /**/
+    display: flex;
+}
+article .new-posted-at{ /**/
+    background-color: #2b4c99;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+article .new-comment{ /**/
+    background-color: #39aae1;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+article .new-tumb img{ /**/
+    margin-top: 30px;
+}
+article .new-tumb img{ /**/
+    width: 100%;
+    height: auto;
+}
+article .new-title{ /**/
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 23px;
+}
+article .new-resumo{ /**/
+    color: #5c5c5c;
+    font-size:15px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+.widget-body{
+    display: flex;
+    /*background-color: #727272;/*cor para visualizar a div*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+.box1, .box2, .box3, .box4, .box5 ,.box6{
+    width:140px;
+    height: 140px;
+    background: #39aae1;
+    margin: 10px;
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    
+}
+.title-description{
+    
+    margin-bottom: 10px;
+    color: #5c5c5c;
+    font-size: 15px;
+}
+.container-numero{
+    /*background-color: antiquewhite;*/
+    height: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #727272;
+}
+.container-email{
+    /*background-color: blanchedalmond;*/
+    height: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #727272;
+}
+.container-others{
+    display: flex;
+    justify-content: space-between;
+    /*background-color: blueviolet;*/
+    height: 40px;
+    margin-bottom: 15px;
+    align-items: center;
+    border-bottom: 1px solid #727272;
+}
+#icone-numero img{
+    height: 25px;
+}
+#text-number{
+    color:#5c5c5c;
+    font-size: 15px;
+}
+#icone-email img{
+    height: 25px;
+}   
+#text-email{
+    color:#5c5c5c;
+    font-size: 15px;
+}
+#icone-outros img{
+    height: 25px;
+}
+#text-outros{
+    color:#5c5c5c;
+    font-size: 15px;
+}
+footer{ /*configurações do meu rodapé*/
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content:center;
+}
+.footer-menu{
+    display: flex;
+    
+}
+.fm-1, .fm-2, .fm-3{
+    flex:1;
+    color: #ffff;  
+}
+.fm-1{
+    background-color: #39aae1;
+    display: flex;
+    flex-direction: column;
+}
+.titulo-texto{
+    
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.titulo-subtitulo{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.fm-2{
+    background-color: #0079c7;
+}
+.fm-3{
+    background-color: #2b4c99
+}
+.footer-menu a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #ffff;
+}
+.footer-area{
+    display: flex;
+}
+.footer-areaitem{
+    flex: 1; 
+    color: #ffff;
+}
+.flex-column{
+    flex-direction: column;
+}
+footer .widget-title-text{
+    color:#ffff;
+}
+.footer-copy{
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: #5c5c5c;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.rodape{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-descricao{
+    font-size: 15px;
+    color: #5c5c5c;
+    margin-bottom: 20px;
+}
+.informations1, .informations2, .informations3, .informations4{
+    display: flex;
+    justify-content: space-between;
+    color: #5c5c5c;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.info4-direita{
+    color: #ffff;
+}
+.icones-rodape{
+    margin-top: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: left;
+}
+.icone-facebook, .icone-twiteer, .icone-instagram, .icone-email{
+    margin-right: 15px;
+}
+.icone-facebook img{
+    height: 28px;
+}
+.icone-twiteer img{
+    height: 28px;
+}
+.icone-instagram img{
+    height: 28px;
+}
+.icone-email img{
+    height: 28px;
+}
+.area-texto,.area-twiteer{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.texto1, .texto2, .texto3{
+    color:#ffff;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.twiteer1, .twiteer2, .twiteer3{
+    color:#ffff;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.menu-mobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 15px;
+}
+.mm-line{
+    height: 3px;
+    background-color: #0079c7;
+}
+
+/*responsividade em tablets*/
+@media (max-width:600px){
+    .banner-text h1{
+        font-size: 50px;
+        padding: 10px;
+    }
+    .banner-text p{
+        font-size: 17px;
+        padding: 10px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    #geral section{
+        padding: 15px;
+    }
+    #geral aside{
+        padding: 15px;
+    }
+    .footer-menu{
+        flex-direction: column;
+    }
+    .footer-area{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .footer-copy{
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    header .container{
+        flex-direction: row;
+    }
+    nav ul{
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #ffff;
+    }
+    header{
+        height: auto;
+    }
+    .logo{
+        padding-left: 15px;
+    }
+    .menu-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+}
