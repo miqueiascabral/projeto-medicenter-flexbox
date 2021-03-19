@@ -10,9 +10,10 @@ header{ /*estilização do cabeçalho*/
     display: flex; /*disparar o uso do flexbox*/
     justify-content: center; /*props para centralizar no meio da pagina a minha div container*/
     height: 120px;
+    
 }
 .container{ /*div do conteudo*/
-    
+
     display: flex; /*disparo para ativar o uso do FLEX nessa DIV*/
     justify-content: space-between; /*essa propriedade faz com minhas divs fique uma na esquerda e outra na direita*/
     width: 990px;
@@ -59,6 +60,7 @@ nav a:hover{
     height: 670px;
     display: flex;
     justify-content: center;
+    
 }
 .column{
     flex-direction: column; /*foi criado uma segunda classe para tratar a div como COLUNA*/
